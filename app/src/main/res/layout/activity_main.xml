@@ -51,10 +51,11 @@
         <TextView
             android:id="@+id/accText"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="55dp"
+            android:baselineAligned="false"
             android:clickable="true"
             android:text="No account? Create one here"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
