@@ -26,7 +26,7 @@
         <EditText
             android:id="@+id/createEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress" />
@@ -34,20 +34,20 @@
         <EditText
             android:id="@+id/createPass"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:ems="10"
             android:hint="Set password"
             android:inputType="textPassword" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="77dp"
             android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/nameFirst"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="text"
@@ -56,7 +56,7 @@
             <EditText
                 android:id="@+id/nameLast"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="text"
@@ -66,13 +66,13 @@
         <RadioButton
             android:id="@+id/handlerRadBtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="75dp"
             android:text="Are you a handler?" />
 
         <Button
             android:id="@+id/createBtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="73dp"
             android:text="Create account" />
 
     </LinearLayout>
