@@ -2,4 +2,7 @@
     <string name="app_name">AIRIS</string>
     <string name="login">Login</string>
     <string name="airis">AIRIS</string>
+    <string name="logF">Login failed</string>
+    <string name="logFmsg">Your login details are incorrect. Please try again</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

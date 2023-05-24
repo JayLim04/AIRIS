@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="sg.edu.rp.c346.id21033869.airis">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -10,8 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AIRIS">
         <activity
-            android:name=".Camera"
+            android:name=".createAcc"
             android:exported="false" />
+        <activity
+            android:name=".CameraActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDn3oyTmdI51xPSTdChg6b1klUiGCXXStc" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
         <activity
             android:name=".mainPage"
             android:exported="false" />
