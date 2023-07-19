@@ -99,14 +99,14 @@ public class MainActivity extends AppCompatActivity {
         alert.show();
     }
 
-    void setVisualState() {
-        /// Providing any params
-        JSONObject params = new JSONObject();
-        try {
-            params.put("data","your data");
-        } catch (JSONException e) {
-            Log.e("AlanButton", e.getMessage());
-        }
-        alanButton.setVisualState(params.toString());
-    }
+//    void setVisualState() {
+//        /// Providing any params
+//        JSONObject params = new JSONObject();
+//        try {
+//            params.put("data","your data");
+//        } catch (JSONException e) {
+//            Log.e("AlanButton", e.getMessage());
+//        }
+//        alanButton.setVisualState(params.toString());
+//    }
 }
