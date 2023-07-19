@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alan.alansdk.AlanConfig;
+import com.alan.alansdk.button.AlanButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -25,12 +27,13 @@ public class MainActivity extends AppCompatActivity {
     private Button btnLogin;
     private TextView btnNewAcc;
 
+    private AlanButton alanButton;
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         etPass = findViewById(R.id.editPass);
         etUser = findViewById(R.id.editUser);
@@ -38,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
         btnNewAcc = findViewById(R.id.accText);
 
         mAuth = FirebaseAuth.getInstance();
+
+        AlanConfig config = AlanConfig.builder().setProjectId("81c38e61708769f036394d63ca557ae32e956eca572e1d8b807a3e2338fdd0dc/stage").build();
+        alanButton = findViewById(R.id.alan_button);
+        alanButton.initWithConfig(config);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
