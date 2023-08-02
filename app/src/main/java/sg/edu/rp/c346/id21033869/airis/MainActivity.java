@@ -14,8 +14,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alan.alansdk.AlanCallback;
 import com.alan.alansdk.AlanConfig;
 import com.alan.alansdk.button.AlanButton;
+import com.alan.alansdk.events.EventCommand;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -86,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void onVoiceCommandButtonClick(View view) {
+        // Launch the VoiceCommandsActivity to handle voice commands
+        Intent intent = new Intent(this, VoiceCommands.class);
+        startActivity(intent);
+    }
+
     private void showLoginFailedDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setMessage("Invalid username or password. Please try again.")
@@ -98,6 +106,8 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alert = builder.create();
         alert.show();
     }
+
+
 
 //    void setVisualState() {
 //        /// Providing any params
