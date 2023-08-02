@@ -4,20 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="15dp"
     tools:context=".mainPage">
-
 
     <Button
         android:id="@+id/emergency"
         android:layout_width="222dp"
         android:layout_height="59dp"
-        android:layout_marginStart="92dp"
+        android:layout_gravity="center"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="5dp"
         android:text="emergency"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -35,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_margin="15dp"
             android:text="Contact" />
 
         <Button
@@ -42,6 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_margin="15dp"
             android:text="Location" />
 
         <Button
@@ -49,6 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_margin="15dp"
             android:text="Camera" />
 
         <Button
@@ -56,6 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_margin="15dp"
             android:text="Settings" />
     </LinearLayout>
 
