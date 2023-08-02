@@ -25,7 +25,6 @@ public class VoiceCommands extends MainActivity{
 
         // Register Alan AI callback to handle voice command responses
         AlanCallback callback = new AlanCallback() {
-            @Override
             public void onCommandReceived(Map<String, String> data) {
                 String command = data.get("command");
                 if (command != null) {
@@ -33,8 +32,6 @@ public class VoiceCommands extends MainActivity{
                     switchActivity(command);
                 }
             }
-
-            @Override
             public void onError(int code, String error) {
                 // Handle error responses from Alan AI if needed
             }
