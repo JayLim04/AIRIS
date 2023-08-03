@@ -37,7 +37,7 @@ public class VoiceCommands extends MainActivity{
             }
         };
 
-        Alan.getInstance().setCallback(callback);
+ //       Alan.getInstance().setCallback(callback);
     }
 
     private void switchActivity(String command) {
