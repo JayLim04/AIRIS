@@ -31,7 +31,8 @@
             android:name=".mainPage"
             android:exported="false" />
         <activity android:name=".VoiceCommands"
-            android:label="VoiceCommands">
+            android:label="VoiceCommands"
+            android:exported="true">
         </activity>
         <activity
             android:name=".MainActivity"
