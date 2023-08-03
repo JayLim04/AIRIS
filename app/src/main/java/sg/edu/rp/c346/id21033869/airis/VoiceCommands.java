@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,7 +26,7 @@ import java.util.Map;
 
 import java.util.Map;
 
-public class VoiceCommands extends MainActivity{
+public class VoiceCommands extends AppCompatActivity {
 
     private AlanButton alanButton;
 
