@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+
 public class SettingsActivity extends AppCompatActivity {
 
     Button changePassBtn, logoutBtn;
@@ -36,7 +37,9 @@ public class SettingsActivity extends AppCompatActivity {
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+//                ref.unauth(); //End user session
+//                startActivity(new Intent(SettingsActivity.this, MainActivityLogin.class)); //Go back to home page
+//                finish();
             }
         });
     }
