@@ -41,7 +41,8 @@ public class mainPage extends AppCompatActivity {
         contactBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(mainPage.this, ContactsActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -64,7 +65,8 @@ public class mainPage extends AppCompatActivity {
         settingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(mainPage.this, SettingsActivity.class);
+                startActivity(intent);
             }
         });
 
