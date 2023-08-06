@@ -7,26 +7,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.alan.alansdk.AlanCallback;
 import com.alan.alansdk.AlanConfig;
 import com.alan.alansdk.button.AlanButton;
-import com.alan.alansdk.events.EventCommand;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivityLogin extends AppCompatActivity {
 
     private EditText etPass;
     private EditText etUser;
@@ -60,16 +54,16 @@ public class MainActivity extends AppCompatActivity {
 
                 if (email.isEmpty() || password.isEmpty()) {
                     // Show an error message indicating empty fields
-                    Toast.makeText(MainActivity.this, "Please enter both email and password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivityLogin.this, "Please enter both email and password", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 mAuth.signInWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                        .addOnCompleteListener(MainActivityLogin.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Intent intent = new Intent(MainActivity.this, mainPage.class);
+                                    Intent intent = new Intent(MainActivityLogin.this, mainPage.class);
                                     startActivity(intent);
                                 } else {
                                     showLoginFailedDialog();
@@ -82,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         btnNewAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, createAcc.class);
+                Intent intent = new Intent(MainActivityLogin.this, createAcc.class);
                 startActivity(intent);
             }
         });
@@ -95,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showLoginFailedDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivityLogin.this);
         builder.setMessage("Invalid username or password. Please try again.")
                 .setCancelable(true)
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
