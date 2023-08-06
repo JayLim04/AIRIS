@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.alan.alansdk.AlanConfig;
+import com.alan.alansdk.button.AlanButton;
+
 public class mainPage extends AppCompatActivity {
 
     Button emBtn;
@@ -15,6 +18,8 @@ public class mainPage extends AppCompatActivity {
     Button locBtn;
     Button camBtn;
     Button settingsBtn;
+
+    private AlanButton alanButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
