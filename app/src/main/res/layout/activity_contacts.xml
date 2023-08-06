@@ -16,19 +16,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/buttonCallJohn"
+        <ListView
+            android:id="@+id/contactList"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:textSize="20sp"
-            android:text="John +92240336" />
-
-        <Button
-            android:id="@+id/buttonCallJim"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:textSize="20sp"
-            android:text="Jimothy +89675543" />
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
