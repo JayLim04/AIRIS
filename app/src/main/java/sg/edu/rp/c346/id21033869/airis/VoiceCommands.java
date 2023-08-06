@@ -1,34 +1,33 @@
 package sg.edu.rp.c346.id21033869.airis;
 
-import android.content.Intent;
-import android.os.Bundle;
-
-import androidx.annotation.Nullable;
-
-import com.alan.alansdk.Alan;
-import com.alan.alansdk.AlanCallback;
-import com.alan.alansdk.AlanConfig;
-import com.alan.alansdk.AlanState;
-import com.alan.alansdk.button.AlanButton;
-import com.alan.alansdk.events.EventCommand;
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.view.View;
+
+import androidx.fragment.app.FragmentManager;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.AppBarConfiguration;
+
+import com.alan.alansdk.AlanCallback;
+import com.alan.alansdk.AlanConfig;
+import com.alan.alansdk.button.AlanButton;
+import com.alan.alansdk.events.EventCommand;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Map;
-
-import java.util.Map;
-
 public class VoiceCommands extends AppCompatActivity {
 
     private AlanButton alanButton;
+
+    private FragmentManager fragmentManager;
+    private NavHostFragment navHostFragment;
+    private NavController navController;
+    private AppBarConfiguration appBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
